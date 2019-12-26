@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Index</title>
+    <script src="/static/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<h1>Qiniu Web SDK Demo 1v1ver.</h1>
+<p>请输入以下信息加入房间</p>
+
+{% csrf_token %}
+<form id="rtcroom">
+    <input id="userid" type="text" placeholder="请输入用户名" required/>
+    <input id="roomname" type="text" placeholder="请输入房间号" required/>
+</form>
+<button form="rtcroom">加入房间</button>
+
+
+<script>
+    document.getElementById('rtcroom').onsubmit = joinRoom;
+
+    function joinRoom(e) {
+        e.preventDefault();
+        const userId = document.getElementById('userid').value;
+        const roomName = document.getElementById('roomname').value;
+        // 获取 roomToken
+
+
+        $.ajax({
+            url: "/index/",
+            type: "POST",
+            data: {
+                "userid": userId,
+                "roomname": roomName,
+                csrfmiddlewaretoken: $("[name='csrfmiddlewaretoken']").val()
+            },
+            success: function (data) {
+                console.info("data", data);
+                window.location = "/room/" + data;
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

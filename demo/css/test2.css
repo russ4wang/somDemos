@@ -1,0 +1,112 @@
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 128px!important;
+  }
+}
+body {
+  min-width: 1080px;
+  max-width: 1280px;
+  width: 10rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ccc;
+}
+body .container {
+  width: 10rem;
+  background-color: transparent;
+}
+body .container .top {
+  position: relative;
+  width: 10rem;
+  height: 1.888889rem;
+  background: url(../images/top.png) no-repeat;
+  background-size: cover;
+}
+body .container .top .backto-index {
+  position: absolute;
+  top: .277778rem;
+  right: 30px;
+  display: block;
+  width: 2.342593rem;
+  height: auto;
+}
+body .container .top .backto-index img {
+  width: 100%;
+  height: auto;
+}
+body .container .middle {
+  width: 10rem;
+  height: 5.5rem;
+  background: url(../images/middle.png) no-repeat;
+  background-size: cover;
+}
+body .container .middle .tips {
+  display: block;
+  width: 9rem;
+  height: 1.074074rem;
+  margin: 0 auto;
+}
+body .container .middle nav {
+  width: 9rem;
+  height: auto;
+  display: flex;
+  flex: column;
+  /*width: 500px;*/
+  margin: 0 auto;
+}
+body .container .middle nav .nav-box {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+body .container .middle nav .nav-box .nav-box1,
+body .container .middle nav .nav-box .nav-box2,
+body .container .middle nav .nav-box .nav-box3 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 80px;
+  height: 100%;
+}
+body .container .middle nav .nav-box .nav-box1 .nav-box1-img,
+body .container .middle nav .nav-box .nav-box2 .nav-box1-img,
+body .container .middle nav .nav-box .nav-box3 .nav-box1-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.222222rem;
+  height: auto;
+}
+body .container .middle nav .nav-box .nav-box1 .nav-box1-img img,
+body .container .middle nav .nav-box .nav-box2 .nav-box1-img img,
+body .container .middle nav .nav-box .nav-box3 .nav-box1-img img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+body .container .middle nav .nav-box .nav-box1 {
+  align-items: flex-start;
+}
+body .container .middle nav .nav-box .nav-box2 {
+  align-items: center;
+}
+body .container .middle nav .nav-box .nav-box3 {
+  align-items: flex-end;
+}
+body .container .bottom {
+  position: relative;
+  width: 10rem;
+  height: .611111rem;
+  background: url(../images/bottom.png) no-repeat;
+  background-size: cover;
+}
+body .container .bottom .last-step {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2.888889rem;
+  height: .611111rem;
+  background-color: pink;
+}
